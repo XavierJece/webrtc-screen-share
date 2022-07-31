@@ -1,3 +1,5 @@
+
+/* eslint-disable */
 import React, { useRef, useEffect } from "react";
 import io from "socket.io-client";
 
@@ -124,7 +126,7 @@ const Room = (props) => {
         navigator.mediaDevices.getDisplayMedia({ cursor: true }).then(stream => {
             const screenTrack = stream.getTracks()[0];
             senders.current.find(sender => sender.track.kind === 'video').replaceTrack(screenTrack);
-            screenTrack.onended = function() {
+            screenTrack.onended = function () {
                 senders.current.find(sender => sender.track.kind === "video").replaceTrack(userStream.current.getTracks()[1]);
             }
         })
@@ -132,8 +134,8 @@ const Room = (props) => {
 
     return (
         <div>
-            <video controls style={{height: 500, width: 500}} autoPlay ref={userVideo} />
-            <video controls style={{height: 500, width: 500}} autoPlay ref={partnerVideo} />
+            <video controls style={{ height: 500, width: 500 }} autoPlay ref={userVideo} />
+            <video controls style={{ height: 500, width: 500 }} autoPlay ref={partnerVideo} />
             <button onClick={shareScreen}>Share screen</button>
         </div>
     );
