@@ -1,6 +1,7 @@
 .room {
   background-color: rgb(142, 189, 123);
   width: 100%;
+  min-height: 100vh;
   height: 100%;
 
   display: flex;
@@ -26,6 +27,8 @@
 .room > div > video {
   width: 500px;
   height: 500px;
+
+  margin: 4px;
 }
 
 .room > button {
