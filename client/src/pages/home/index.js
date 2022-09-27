@@ -1,5 +1,6 @@
 import React from "react";
 import { v1 as uuid } from "uuid";
+import "./style.css";
 
 const CreateRoom = (props) => {
     function create() {
@@ -8,8 +9,10 @@ const CreateRoom = (props) => {
     }
 
     return (
-        <button onClick={create}>Create Room</button>
+        <main className="home">
+            <button onClick={create}>Share Screen</button>
+        </main>
     );
-}
+};
 
 export default CreateRoom;
